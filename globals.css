@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.home {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  border-bottom: 1px solid #222;
+}
+
+.navbar h2 {
+  margin: 0;
+  letter-spacing: 4px;
+}
+
+.cartButton {
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  border-radius: 30px;
+  padding: 10px 18px;
+}
+
+.hero {
+  min-height: 75vh;
+  padding: 80px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #080808;
+}
+
+.smallText {
+  color: #d4af37;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(65px, 13vw, 150px);
+  line-height: .82;
+  margin: 20px 0;
+}
+
+.hero p {
+  color: #aaa;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.orderButton {
+  width: fit-content;
+  margin-top: 20px;
+  padding: 15px 28px;
+  border: 0;
+  border-radius: 30px;
+  background: #d4af37;
+  color: #080808;
+  font-weight: bold;
+}
+
+.menu,
+.cartSection,
+.checkout {
+  padding: 80px 7%;
+}
+
+.sectionTitle h2 {
+  font-size: 40px;
+}
+
+.cocktailGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cocktailCard {
+  background: #121212;
+  border: 1px solid #242424;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.cocktailImage {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1b1b1b;
+  border-radius: 14px;
+  font-size: 60px;
+}
+
+.cocktailType {
+  color: #d4af37;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.cocktailCard p {
+  color: #999;
+  line-height: 1.5;
+}
+
+.addButton {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  background: transparent;
+  color: #d4af37;
+}
+
+.cartSection {
+  background: #101010;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.cartItem button {
+  background: transparent;
+  color: #ff7777;
+  border: 1px solid #ff7777;
+  border-radius: 8px;
+  padding: 8px 14px;
+}
+
+.cartTotal {
+  text-align: right;
+  margin-top: 25px;
+}
+
+.checkoutBox {
+  max-width: 650px;
+  margin: auto;
+  padding: 35px;
+  background: #121212;
+  border-radius: 20px;
+}
+
+.checkoutBox form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkoutBox label {
+  margin-top: 12px;
+  color: #d4af37;
+}
+
+.checkoutBox input,
+.checkoutBox textarea {
+  padding: 14px;
+  background: #1b1b1b;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.checkoutBox textarea {
+  min-height: 100px;
+}
+
+.checkoutTotal {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.delivery {
+  margin: 50px 7%;
+  padding: 70px 30px;
+  text-align: center;
+  background: #141414;
+  border-radius: 25px;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+  border-top: 1px solid #222;
+  color: #777;
+}
+
+footer h3 {
+  color: #d4af37;
+  letter-spacing: 3px;
+}
+
+.confirmation {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.confirmationBox {
+  max-width: 600px;
+  padding: 50px 30px;
+  text-align: center;
+  background: #121212;
+  border-radius: 25px;
+}
+
+.successIcon {
+  font-size: 50px;
+  color: #d4af37;
+}
+
+@media (max-width: 900px) {
+  .cocktailGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cocktailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .menu,
+  .cartSection,
+  .checkout {
+    padding: 60px 5%;
+  }
+}
